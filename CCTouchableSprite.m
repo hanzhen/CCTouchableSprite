@@ -1,9 +1,8 @@
 //
 //  CCTouchableSprite.m
-//  GraviKill
 //
 //  Created by Nicholas Thompson on 19/11/2012.
-//  Copyright 2012 __MyCompanyName__. All rights reserved.
+//  Copyright 2012 ThingyMaJig. All rights reserved.
 //
 
 #import "CCTouchableSprite.h"
@@ -59,21 +58,21 @@
 
 
 - (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event {
-	CGPoint location = [[CCDirector sharedDirector] convertToGL:[touch locationInView:[touch view]]];
+  CGPoint location = [[CCDirector sharedDirector] convertToGL:[touch locationInView:[touch view]]];
 
     location = [self convertToNodeSpace:location];
-    
+
     if ([self isTouchContained:location]) {
         if (blockBegan_) blockBegan_(self);
         return YES;
     }
-    
-	return NO;
+
+  return NO;
 }
 
 - (void)ccTouchMoved:(UITouch *)touch withEvent:(UIEvent *)event {
-	CGPoint location = [[CCDirector sharedDirector] convertToGL:[touch locationInView:[touch view]]];
-	location = [self convertToNodeSpace:location];
+  CGPoint location = [[CCDirector sharedDirector] convertToGL:[touch locationInView:[touch view]]];
+  location = [self convertToNodeSpace:location];
     if ([self isTouchContained:location]) {
         if (blockMoved_) blockMoved_(self);
     }
@@ -84,8 +83,8 @@
 }
 
 - (void)ccTouchCancelled:(UITouch *)touch withEvent:(UIEvent *)event {
-	[self ccTouchEnded:touch withEvent:event];
+  [self ccTouchEnded:touch withEvent:event];
 }
 
-#endif  
+#endif
 @end

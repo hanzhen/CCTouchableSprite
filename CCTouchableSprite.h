@@ -1,9 +1,8 @@
 //
 //  CCTouchableSprite.h
-//  GraviKill
 //
 //  Created by Nicholas Thompson on 19/11/2012.
-//  Copyright 2012 __MyCompanyName__. All rights reserved.
+//  Copyright 2012 ThingyMaJig. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
