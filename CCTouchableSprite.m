@@ -52,7 +52,7 @@
 
 
 -(BOOL) isTouchContained:(CGPoint) location {
-    return active_ ? CGRectContainsPoint(CGRectMake(0.0f, 0.0f, rect_.size.width, rect_.size.height), location) : NO;
+    return active_ ? CGRectContainsPoint(CGRectMake(0.0f, 0.0f, _rect.size.width, _rect.size.height), location) : NO;
 }
 
 
