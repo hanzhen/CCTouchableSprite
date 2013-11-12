@@ -35,17 +35,21 @@
 #ifdef __IPHONE_OS_VERSION_MAX_ALLOWED
 
 - (void) onEnterTransitionDidFinish {
+    [super onEnterTransitionDidFinish];
     [[[CCDirector sharedDirector] touchDispatcher] addTargetedDelegate:self priority:1 swallowsTouches:YES];
 }
 
 - (void) onExit {
+    [super onExit];
     [[[CCDirector sharedDirector] touchDispatcher] removeDelegate:self];
 }
 
 -(void) pauseSchedulerAndActions {
+    [super pauseSchedulerAndActions];
     active_ = NO;
 }
 -(void) resumeSchedulerAndActions {
+    [super resumeSchedulerAndActions];
     active_ = YES;
 }
 
